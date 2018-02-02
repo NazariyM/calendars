@@ -1,0 +1,347 @@
+.screen
+  padding: 18px 0 0
+  background: #f0e7e8 url("../img/bg/screen_bg.png") repeat-x
+  &__slider
+    display: none
+    &.slick-initialized
+      display: block
+  &__item
+    +vertical
+    img
+      display: inline-block
+      vertical-align: middle
+  .slick-arrow
+    width: 22px
+    height: 29px
+    border-radius: 0
+    transform: translate(0)
+    position: absolute
+    top: calc(50% + 6px)
+    font-size: 0
+    z-index: 2
+  .slick-prev
+    left: -15px
+    +sm
+      left: 0
+    background: url(../img/icons/sld-arrows.png) left center no-repeat
+  .slick-next
+    right: -15px
+    background: url(../img/icons/sld-arrows.png) right center no-repeat
+    +sm
+      right: 0
+      
+.menu
+  background-color: #f7f7f7
+  &__mob-title
+    display: none
+    text-transform: uppercase
+    padding: 15px 0
+    +xs
+      display: block
+      font-size: 24px
+  ul
+    display: flex
+    +sm
+      padding: 0
+    +xs
+      flex-direction: column
+      display: none
+  li
+    flex: 1 1 auto
+    padding: 28px 5px
+    border-right: 1px solid #edeeee
+    text-align: center
+    +sm
+      padding: 20px 5px
+    +xs
+      padding: 15px 5px
+      border-bottom: 1px solid #edeeee
+    &:first-child
+      border-left: 1px solid #edeeee
+      +xs
+        border-top: 1px solid #edeeee
+  a
+    text-transform: uppercase
+    +f('rob-700', 14)
+    +trs
+    +sm
+      font-size: 12px
+    .no-touch &:hover
+      color: #de4d4f
+    
+.how
+  padding: 80px 0
+  +sm
+    padding: 50px 0
+  &__inner
+    margin-top: 40px
+    text-align: center
+    font-size: 0
+  &__btn
+    margin: 0 10px
+    min-width: 290px
+    border-width: 3px
+    height: 56px
+    line-height: 51px
+    +f('rob-300', 18)
+    color: #4d4d4f
+    text-transform: none
+    +sm
+      margin: 0 10px 20px
+
+.search-line
+  padding: 28px 0
+  background: url("../img/bg/triangles_bg.png") repeat 50% 50%
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +xs
+      flex-direction: column
+      align-items: stretch
+      text-align: center
+  &__btn
+    flex: 0 0 auto
+    span
+      margin-left: 14px
+      text-transform: uppercase
+      +f('rob-700', 14)
+      color: #4d4d4f
+      border-bottom: 1px solid currentColor
+      +trs
+    .no-touch &:hover span
+      border-bottom-color: transparent
+  &__form
+    flex: 0 1 540px
+    margin-left: 100px
+    +xs
+      flex: 1 0 auto
+      margin-top: 20px
+      margin-left: 0
+    &-field
+      position: relative
+    &-input
+      padding: 0 110px 0 20px
+      +xs
+        padding: 0 100px 0 10px
+    &-submit
+      position: absolute
+      top: 0
+      width: 100px
+      right: 0
+      bottom: 0
+      padding-left: 15px
+      display: flex
+      align-items: center
+      cursor: pointer
+      input
+        margin-right: 7px
+        background-color: transparent
+        border: 0
+        padding: 0
+        +f('rob-700', 14)
+        color: #000
+
+.catalog
+  &__container
+    padding: 60px 15px 80px
+    +sm
+      padding: 50px 15px 30px
+    +xs
+      padding: 40px 15px
+  &__inner
+    margin: 0 -15px
+    font-size: 0
+    text-align: center
+    +xs
+      margin: 0
+  &__item
+    display: inline-block
+    vertical-align: top
+    width: calc(50% - 30px)
+    min-width: 540px
+    margin: 0 15px 30px
+    padding: 23px 30px 30px
+    box-shadow: 0 0 7px rgba(11, 16, 36, 0.1)
+    border-radius: 3px
+    background-color: #ffffff
+    text-align: left
+    +xs
+      width: 100%
+      margin: 0 0 30px
+      min-width: 0
+      padding: 20px 15px 20px
+    .no-touch &:hover .catalog__item-img img
+      transform: scale(1.1)
+    &-title
+      font-size: 17px
+      line-height: 25px
+      margin-bottom: 13px
+    &-img
+      overflow: hidden
+      margin-bottom: 15px
+      height: 210px
+      +cover-img
+      img
+        transition: transform .3s ease
+        
+.advantages
+  padding: 80px 0 120px
+  background: url("../img/bg/triangles_bg.png") repeat 50% 50%
+  +sm
+    padding: 50px 0 80px
+  &__title
+    margin-bottom: 30px
+    
+.c-tabs
+  &__tabs-nav
+    position: relative
+    display: flex
+    +xs
+      flex-direction: column
+  &__tabs-el
+    position: relative
+    width: 20%
+    height: 220px
+    padding: 66px 50px 10px
+    text-transform: uppercase
+    cursor: pointer
+    border: 2px solid #de4d4f
+    +f('rob-700', 14)
+    color: #000
+    transition: .3s ease
+    text-align: center
+    +sm
+      height: auto
+      padding: 25px 0 20px
+    +xs
+      width: auto
+      border-bottom: 0
+      padding: 15px 0 20px
+    &.is-active
+      pointer-events: none
+      background: #de4d4f
+      color: #fff
+    &.is-active .icon-active
+      opacity: 1
+    &.is-active .icon
+      opacity: 0
+    &:not(:first-child)
+      border-left: 0
+      +xs
+        border-left: 2px solid #de4d4f
+        &:last-child
+          border-bottom: 2px solid #de4d4f
+  &__tabs-for
+    min-height: 240px
+    padding: 35px 30px 40px 30px
+    border: 1px solid #cbcdce
+    background-color: #ffffff
+    +xs
+      padding: 25px 20px 25px 20px
+  &__tab
+    display: none
+    &:first-child
+      display: block
+  &__item
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: calc(33.33333% - 30px)
+    padding: 20px 25px 110px
+    margin: 0 15px 30px
+    min-height: 490px
+    background: $white
+    text-align: left
+  &__tabs-icons
+    position: relative
+    margin-bottom: 23px
+    height: 60px
+    +xs
+      margin-bottom: 10px
+    .icon-active
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      opacity: 0
+  &__list
+    li
+      &:not(:last-child)
+        margin-bottom: 8px
+      &::before
+        display: inline-block
+        vertical-align: middle
+        content: ''
+        margin-right: 9px
+        +arr(7, 13, #de4d4f, r)
+      p
+        display: inline-block
+        vertical-align: middle
+        width: calc(100% - 21px)
+        +f('rob-300', 16)
+  &__row
+    padding-top: 15px
+    text-align: right
+    
+.ask
+  padding: 110px 0 130px
+  background: url("../img/bg/envelope_bg.png") no-repeat left 0 bottom 35px
+  +r(1599)
+    background-position: left -120px bottom 35px
+  +sm
+    padding: 60px 0 70px
+    background-position: left -80px bottom -15px
+  +xs
+    padding: 40px 0
+    background: none
+  &__container
+    max-width: 804px
+  &__descr
+    text-align: center
+    font-size: 20px
+    line-height: 33px
+    color: $black
+    +f('rob-300')
+    +xs
+      font-size: 17px
+  &__form
+    margin: 20px 0 0
+    +clr
+  &__form-col
+    float: left
+    width: percentage(258 / 774)
+    +xs
+      width: auto
+      float: none
+      &:not(:first-child)
+        margin-top: 15px
+    &:nth-child(1)
+      padding-right: 15px
+      +xs
+        padding-right: 0
+    &:nth-child(3)
+      width: percentage(244 / 774)
+      padding-right: 0
+      padding-left: 15px
+      text-align: center
+      +xs
+        width: auto
+        padding-left: 0
+  &__form-input
+    padding: 0 20px 0 50px
+  &__form-field
+    position: relative
+    .icon
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 20px
+    & + &
+      margin-top: 15px
+  &__form-message
+    min-height: 105px
+  &__form-descr
+    margin-top: 13px
+    +f('rob-300', 13)
+    color: #4d4d4f

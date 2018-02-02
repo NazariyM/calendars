@@ -1,0 +1,97 @@
+// basic styles
+body
+	min-width: 320px
+	+f('rob-300', 16)
+	line-height: 1.2
+	color: $black
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		overflow: hidden
+	
+.out
+	overflow: hidden
+
+.container
+	max-width: 1140px
+	margin: 0 auto
+	padding: 0 15px
+	+xs
+		padding: 0 10px
+		
+// titles
+.title
+	+f('rob-500', 35)
+	color: #000
+	text-align: center
+	text-transform: uppercase
+	+xs
+		font-size: 30px
+// buttons
+.btn
+	position: relative
+	display: inline-block
+	vertical-align: top
+	text-align: center
+	text-transform: uppercase
+	border-radius: 3px
+	+f('rob-700', 14)
+	outline: 0
+	+trs
+	&_white
+		width: 150px
+		height: 40px
+		line-height: 38px
+		padding: 0 10px
+		border: 2px solid #de4d4f
+		background-color: #ffffff
+		color: #000
+		.no-touch &:hover
+			background: #de4d4f
+			color: #fff
+	&_red
+		min-width: 168px
+		height: 50px
+		line-height: 48px
+		background-color: #de4d4f
+		color: #fff
+		border: 0
+		.no-touch &:hover
+			background: darken(#de4d4f, 12)
+		
+		
+//input.btn
+//	+trs
+//	.no-touch &:hover
+//		box-shadow: 0 0 10px rgba($black, .4)
+
+.input
+	width: 100%
+	height: 45px
+	padding: 0 20px
+	+f('rob-300', 14)
+	border-radius: 3px
+	border: 2px solid #cbcdce
+	background-color: #ffffff
+	color: #000
+	+trs
+	+placeholder-color(#4d4d4f)
+	&:focus
+		border-color: #de4d4f
+	
+.textarea
+	display: block
+	width: 100%
+	padding: 6px 20px
+	resize: none
+	line-height: 28px
+	+f('rob-300', 14)
+	border-radius: 3px
+	border: 2px solid #cbcdce
+	background-color: #ffffff
+	+placeholder-color(#4d4d4f)
+	+xs
+		padding: 15px

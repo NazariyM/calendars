@@ -1,0 +1,142 @@
+extends ../extend/default
+
+block variables
+	-title = 'Home page';
+
+block main
+	+b.SECTION.screen
+		+e.container.container
+			+e.slider.js-slider
+				+e.item
+					+e.IMG(src='static/img/content/screen_img.png' alt='image')
+				+e.item
+					+e.IMG(src='static/img/content/screen_img.png' alt='image')
+
+		+b.menu.js-menu
+			+e.mob-title.title Меню
+			ul.container
+				li: a(href='#!') Квартальные
+				li: a(href='#!') Настенные
+				li: a(href='#!') Настольные
+				li: a(href='#!') Другие
+				li: a(href='#!') Календарные блоки
+				li: a(href='#!') Комплектующие
+				li: a(href='#!') Акции
+
+	+b.SECTION.how
+		+e.container.container
+			+e.H2.title.title КАК ЗАКАЗАТЬ КАЛЕНДАРИ?
+
+			+e.inner
+				+e.A.btn.btn._white(href='#!') Online прямо сейчас
+				+e.A.btn.btn._white(href='#!') Отправить заявку на почту
+				+e.A.btn.btn._white(href='#!') В офисе у менеджера
+
+	+b.SECTION.catalog
+		+b.search-line
+			+e.container.container
+				+e.A.btn(href='#!')
+					.icon-paper
+					span КАТАЛОГ ПРОДУКЦИИ
+
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-field
+						+e.INPUT.form-input.input(type='text' placeholder='Поиск продукции по сайту' name='' required)
+						+e.LABEL.form-submit
+							+e.INPUT(type='submit' value='НАЙТИ')
+							.icon-search
+
+		+e.container.container
+			+e.inner
+				+e.item
+					+e.item-title Настенные календари со спиральным креплением
+					+e.item-img
+						+e.IMG(src='static/img/content/cat-1.jpg' alt='image')
+					+e.BUTTON.btn.btn._white(type='button') ПОДРОБНЕЕ
+
+				+e.item
+					+e.item-title Настенные календари со спиральным креплением
+					+e.item-img
+						+e.IMG(src='static/img/content/cat-2.jpg' alt='image')
+					+e.BUTTON.btn.btn._white(type='button') ПОДРОБНЕЕ
+
+				+e.item
+					+e.item-title Настенные календари со спиральным креплением
+					+e.item-img
+						+e.IMG(src='static/img/content/cat-3.jpg' alt='image')
+					+e.BUTTON.btn.btn._white(type='button') ПОДРОБНЕЕ
+
+				+e.item
+					+e.item-title Настенные календари со спиральным креплением
+					+e.item-img
+						+e.IMG(src='static/img/content/cat-4.jpg' alt='image')
+					+e.BUTTON.btn.btn._white(type='button') ПОДРОБНЕЕ
+
+	+b.SECTION.advantages
+		+e.container.container
+			+e.H2.title.title НАШИ ПРЕИМУЩЕСТВА
+			+b.c-tabs
+				+e.tabs-nav
+					+e.tabs-el.is-active
+						+e.tabs-icons
+							.icon-hand.icon
+							.icon-hand-act.icon-active
+						span Наши преимущества
+					+e.tabs-el
+						+e.tabs-icons
+							.icon-car.icon
+							.icon-car-act.icon-active
+						span доставка
+							+e.BR
+							| и самовывоз
+					+e.tabs-el
+						+e.tabs-icons
+							.icon-pen.icon
+							.icon-pen-act.icon-active
+						span дизайн
+					+e.tabs-el
+						+e.tabs-icons
+							.icon-present.icon
+							.icon-present-act.icon-active
+						span скидки
+							+e.BR
+							| и акции
+					+e.tabs-el
+						+e.tabs-icons
+							.icon-detail.icon
+							.icon-detail-act.icon-active
+						span наше производство
+				+e.tabs-for
+					-i = 0
+					while i < 5
+						+e.tab
+							+e.UL.list
+								li
+									p изготовление квартальных календарей, в т. ч нестандартных, эксклюзивных и по индивидуальному заказу
+								li
+									p огромный ассортимент календарных блоков (по цене, размерам, цвету) и комплектующих в наличии
+								li
+									p современный полиграфический комплекс с автоматизированной сборкой на оборудовании мирового лидера - немецкой компании Renz
+								li
+									p применение новейших материалов
+							+e.row
+								+e.A.btn.btn._white(href='#!') ПОДРОБНЕЕ
+						-i++
+
+	+b.SECTION.ask
+		+e.container.container
+			+b.H2.title.title Есть, что спросить?
+			+e.P.descr Ответим на любые ваши вопросы
+			+e.FORM.form(action='#!')
+				+e.form-col
+					+e.form-field
+						.icon.icon-user-sm
+						+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+					+e.form-field
+						.icon.icon-mail-sm
+						+e.INPUT.form-input.input(type='email' placeholder='Ваш e-mail' name='' required)
+				+e.form-col
+					+e.TEXTAREA.form-message.textarea(placeholder='Ваш комментарий')
+				+e.form-col
+					+e.INPUT.form-submit.btn._red(type='submit' value='Отправить')
+					+e.P.form-descr Мы обработаем Ваш запрос и дадим ответ в течение одного рабочего дня.

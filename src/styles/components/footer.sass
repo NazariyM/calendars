@@ -1,0 +1,143 @@
+.footer
+  padding: 50px 0
+  background: url("../img/bg/triangles_bg.png") repeat 50% 50%
+  color: #4d4d4f
+  +xs
+    padding: 50px 0 80px
+  &__container
+    position: relative
+    display: flex
+    justify-content: space-between
+    +sm
+      flex-wrap: wrap
+    +xs
+      justify-content: space-around
+  &__col
+    flex: 1 1 auto
+    padding-bottom: 115px
+    padding-right: 10px
+    text-align: left
+    +xs
+      flex: 0 1 260px
+      padding-bottom: 25px
+      margin: 0 10px
+    +r(599)
+      flex-basis: 252px
+    &:nth-child(5)
+      position: relative
+      flex-basis: 90px
+      padding-right: 0
+      +sm
+        flex-basis: 100%
+        padding: 15px 0 100px
+        text-align: center
+        .footer__title
+          text-align: center
+      +xs
+        padding: 0
+  &__logo
+    display: block
+    margin-bottom: 10px
+  &__title
+    margin-bottom: 12px
+    text-align: left
+    letter-spacing: .07em
+    font-size: 16px
+    +f('rob-bl')
+    +sm
+      font-size: 16px
+      letter-spacing: 0
+    +xs
+      font-size: 18px
+  &__list
+    li
+      line-height: 20px
+    li:not(:last-child)
+      margin-bottom: 10px
+    a
+      font-size: 14px
+      line-height: 18px
+      text-decoration: underline
+      +sm
+        font-size: 14px
+      .no-touch &:hover
+        text-decoration: none
+  &__address
+    flex: 1 1 164px
+    padding-bottom: 0
+    font-style: normal
+    font-size: 14px
+    +sm
+      font-size: 14px
+    &-item:not(:last-child)
+      margin-bottom: 19px
+    &-city
+      +f('rob-700')
+      text-transform: uppercase
+      color: #de4d4f
+    &-str
+      margin: 3px 0
+    &-tel
+      +f('rob-500')
+  &__mail-link
+    display: block
+    margin: 17px 0 10px
+    text-align: center
+    font-size: 14px
+  &__write-btn
+    height: 41px
+    width: 100%
+    max-width: 168px
+    margin: 0 auto
+    line-height: 41px
+  &__dev-link
+    position: absolute
+    right: 50px
+    bottom: 0
+    display: block
+    padding-left: 16px
+    font-size: 14px
+    line-height: 18px
+    .no-touch &:hover span
+      text-decoration: none
+    +sm
+      right: 15px
+    +xs
+      right: calc(50% - 61px)
+      bottom: -50px
+      text-align: center
+    .icon-akticom
+      position: absolute
+      top: -5px
+      left: -8px
+    span
+      text-decoration: underline
+  &__copy
+    position: absolute
+    left: 15px
+    max-width: 610px
+    bottom: 0
+    font-size: 13px
+    color: $black
+    +r(1279)
+      max-width: 540px
+    +xs
+      position: static
+      margin-top: 15px
+      text-align: center
+    a
+      color: #de4d4f
+      text-decoration: underline
+    p
+      line-height: 19px
+      
+.socials
+  font-size: 0
+  &__link
+    display: inline-block
+    vertical-align: middle
+    +trs
+    .no-touch &:hover
+      opacity: .7
+    &:not(:last-child)
+      margin-right: 15px

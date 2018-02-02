@@ -1,0 +1,36 @@
+header.header
+	nav.nav
+		.container
+			button(type='button').hamburger.js-nav-toggle
+				span
+
+			ul.nav__list.js-nav
+				li: a(href='#') О компании
+				li: a(href='#') Дизайн
+				li: a(href='#') Доставка
+				li: a(href='#') Как купить
+				li: a(href='#') Портфолио
+				li: a(href='#') Сотрудничество
+				li: a(href='#') Контакты
+
+	.container.header__bottom
+		a(href='#').logo
+			img(src='static/img/icons/logo.png', alt='Календари')
+		+b.tel-block
+			+e.A.link(href='#')
+				.icon-tel
+				+e.SPAN 8 (800) 265-80-80
+			+e.P.info Звонок по РФ бесплатный
+
+		+b.user-actions
+			+e.item._mail
+				+e.A.btn(href='#!')
+					+e.SPAN.count 3
+					.icon-mail
+			+e.item._cart
+				+e.A.btn(href='#!')
+					+e.SPAN.count 11
+					.icon-cart
+			+e.item._user
+				+e.A.btn(href='#!')
+					.icon-user

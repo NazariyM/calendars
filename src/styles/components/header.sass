@@ -1,0 +1,212 @@
+// hamburger
+.hamburger
+  display: none
+  position: absolute
+  top: 16px
+  right: 10px
+  margin: 0
+  padding: 0
+  width: 40px
+  height: 32px
+  font-size: 0
+  box-shadow: none
+  border-radius: 0
+  border: none
+  cursor: pointer
+  z-index: 300
+  transition: background 0.3s
+  backface-visibility: hidden
+  -webkit-tap-highlight-color: transparent
+  span
+    display: block
+    position: absolute
+    top: 13px
+    left: 2px
+    right: 2px
+    height: 4px
+    background: #de4d4f
+    transition: background 0s 0.3s
+    &::after, &::before
+      position: absolute
+      display: block
+      left: 0
+      width: 100%
+      height: 4px
+      background-color: #de4d4f
+      content: ""
+    &::before
+      top: -10px
+      transition: top 0.3s ease 0.3s, transform 0.3s ease 0s
+    &::after
+      bottom: -10px
+      transition: bottom 0.3s ease 0.3s, transform 0.3s ease 0s
+  &.is-active
+    span
+      background: none
+      &::before
+        top: 0
+        transform: rotate(45deg)
+        transition: top 0.3s ease 0s, transform 0.3s ease 0.3s
+      &::after
+        bottom: 0
+        transform: rotate(-45deg)
+        transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s
+  +r(767)
+    display: block
+
+.header
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 17px 15px
+    background-color: #ffffff
+    +xs
+      flex-direction: column
+      padding: 0 10px 20px
+    .logo
+      overflow: hidden
+      width: 194px
+      +xs
+        position: absolute
+        top: 12px
+        left: 10px
+        z-index: 101
+        width: 140px
+      img
+        display: block
+        width: 100%
+        +md
+          transform: translate3d(0, 0, 0)
+        
+.tel-block
+  text-align: center
+  padding-top: 21px
+  +xs
+    padding: 15px 0 10px
+    flex: 1 0 auto
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 30px
+    color: #000000
+    text-decoration: none
+    position: relative
+    letter-spacing: -0.5px
+    +f('rob-500')
+    +trs
+    .no-touch &:hover
+      color: #de4d4f
+    +md
+      font-size: 23px
+    span
+      margin-left: 10px
+  &__info
+    font-size: 14px
+    color: #4d4d4f
+    display: block
+    line-height: 30px
+    +f('rob-300')
+    
+.nav
+  padding: 16px 0
+  background-color: #f7f7f7
+  +xs
+    height: 60px
+    padding: 0
+  &__list
+    +clr
+    +sm
+      display: flex
+      justify-content: space-between
+    +r(767)
+      display: none
+      position: fixed
+      top: 60px
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 100
+      padding: 0
+      flex-direction: column
+      justify-content: center
+      background: #f7f7f7
+      overflow: auto
+    &::after
+      +sm
+        display: none
+    li
+      float: left
+      margin-right: 36px
+      +sm
+        float: none
+        margin-right: 0
+      a
+        +f('rob-400')
+        font-size: 12px
+        color: #4d4d4f
+        display: inline-block
+        text-decoration: none
+        text-transform: uppercase
+        border-bottom: 1px solid #8c8c8e
+        -moz-transition: all 0.2s ease-in-out
+        -o-transition: all 0.2s ease-in-out
+        -webkit-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out
+        +xs
+          display: block
+          font-size: 22px
+          border-bottom: 0
+          padding: 15px
+          text-align: center
+          color: #de4d4f
+        &:hover
+          border-bottom-color: transparent
+          
+.user-actions
+  display: flex
+  align-items: center
+  +xs
+    flex: 1 0 auto
+    justify-content: center
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 49px
+    border-left: 1px solid #e6e7e8
+    &_mail
+      width: 92px
+      .user-actions__count
+        right: -9px
+        top: -10px
+        background: #cbcdce
+        color: #221f20
+    &_cart
+      width: 97px
+      .user-actions__count
+        background-color: #de4d4f
+        color: #fff
+        right: -9px
+        top: -7px
+    &_user
+      justify-content: flex-end
+      width: 58px
+      +xs
+        width: 97px
+        justify-content: center
+        border-right: 1px solid #e6e7e8
+  &__btn
+    position: relative
+  &__count
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    +f('rob-700', 11)
+    line-height: 20px
+    text-align: center
